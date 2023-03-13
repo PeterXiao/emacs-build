@@ -74,7 +74,7 @@ if (!(Test-Path "$emacs_build_dir\msys2-upgraded.log"))
     # .\scripts\msys2.cmd -c 'pacman --noprogressbar --noconfirm -Syuu'
     # Install packages required by emacs-build
     Write-Output "Install essential packages"
-    .\scripts\msys2.cmd -c 'pacman --noprogressbar --needed --noconfirm -S git unzip zip base-devel mingw-w64-x86_64-toolchain autoconf automake'
+    # .\scripts\msys2.cmd -c 'pacman --noprogressbar --needed --noconfirm -S git unzip zip base-devel mingw-w64-x86_64-toolchain autoconf automake'
 
     Write-Output "done" > "$emacs_build_dir\msys2-upgraded.log"
 }
