@@ -71,7 +71,7 @@ jobs:
         run: remove-item -recurse -force  $env:MSYS2_DIR\mingw64 
       - name: Copy NewMinGW  #modefy force
         if: runner.os == 'Windows'
-        run: Move-Item -Path $env:WINLIBS_FILE/mingw64 -recurse -force -Destination $env:MSYS2_DIR
+        run: Move-Item -Path $env:WINLIBS_FILE/mingw64  -force -Destination $env:MSYS2_DIR
          #mingw64 modefy
 
       - name: Clone Emacs
