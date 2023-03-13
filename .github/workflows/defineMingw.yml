@@ -1,5 +1,5 @@
 
-name: build
+name: definenewcompile
 
 permissions:
   contents: write
