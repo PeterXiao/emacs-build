@@ -66,9 +66,9 @@ jobs:
       - name: Clone Emacs
         if: runner.os == 'Windows'
         run: .\emacs-build.cmd --clone --repo https://github.com/kiennq/emacs.git --depth 1
-          #       - name: Remove OldMinGW
-          #         if: runner.os == 'Windows'
-          #         run: remove-item -recurse -force  $env:MSYS2_DIR\mingw64 
+      - name: Remove OldMinGW
+        if: runner.os == 'Windows'
+        run: remove-item -recurse -force  $env:MSYS2_DIR\mingw64 
       - name: Copy NewMinGW  #modefy force
         if: runner.os == 'Windows'
         run: Move-Item -Path $env:WINLIBS_FILE/mingw64   -Destination $env:MSYS2_DIR  -Force -Recurse
