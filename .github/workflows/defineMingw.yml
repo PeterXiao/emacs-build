@@ -62,5 +62,5 @@ jobs:
       - name: Extract MinGW
         run: Expand-Archive ./mingw.zip -DestinationPath  $env:WINLIBS_FILE
       - name: Copy NewMinGW
-        run: Move-Item -Path /$env:WINLIBS_FILE/mingw64 -Destination $env:MSYS2_DIR
+        run: Move-Item -Path $env:WINLIBS_FILE/mingw64 -Destination $env:MSYS2_DIR
         #mingw64
