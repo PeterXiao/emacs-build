@@ -58,11 +58,11 @@ jobs:
             file-name: 'mingw.zip'
             location: './'
       - name: Extract MinGW
-        run: Expand-Archive ./mingw.zip -DestinationPath ~/$env:WINLIBS_FILE_NAME_STEM
+        run: Expand-Archive ./mingw.zip -DestinationPath ~/$env:MSYS2_DIR/winlibs-x86_64-posix-seh
         #mingw64
       - name: Remove OldMinGW
-        run: remove-item -recurse -force  C:\msys64\mingw64
+        run: remove-item -recurse -force  $env:MSYS2_DIR\mingw64
         #mingw64
       - name: Copy NewMinGW
-        run: Move-Item -Path $env:WINLIBS_FILE_NAME_STEM\mingw64 -Destination $env:MSYS2_DIR
+        run: Move-Item -Path /$env:MSYS2_DIR/winlibs-x86_64-posix-seh/mingw64 -Destination $env:MSYS2_DIR
         #mingw64
