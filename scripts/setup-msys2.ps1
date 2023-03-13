@@ -28,8 +28,8 @@ else
 
 if (!(Test-Path "$msys2_dir\msys2_shell.cmd"))
 {
-    $inst_url = 'https://github.com/msys2/msys2-installer/releases/download/nightly-x86_64/msys2-base-x86_64-latest.sfx.exe'
-    $installer_checksum = 'BB92718BCE932398A2E236D60C53EF35C3BC9A96999A26DD5814E66A2F4BAF1F'
+    $inst_url = 'https://github.com/msys2/msys2-installer/releases/download/2023-01-27/msys2-base-x86_64-20230127.sfx.exe'
+    $installer_checksum = '9bc4ee85635f2b3e7b73226c09772b89043da23c7beb4c420f93077b173b293a '
     $installer = $msys2_dir + '\msys2-base.exe'
 
     if (!(Test-Path $installer))
